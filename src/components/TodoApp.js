@@ -11,14 +11,15 @@ import { Typography, Paper, AppBar, Toolbar, Grid } from '@material-ui/core';
 import '../styles/TodoApp.css';
 
 function TodoApp() {
-  const initialTodos = JSON.parse(window.localStorage.getItem('todos') || '[]');
+  const initialTodos = [{ id: 1, task: 'Play Games', completed: false }];
+  // const initialTodos = JSON.parse(window.localStorage.getItem('todos') || '[]');
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
   );
 
-  useEffect(() => {
-    window.localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+  // useEffect(() => {
+  //   window.localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [todos]);
 
   return (
     <Paper

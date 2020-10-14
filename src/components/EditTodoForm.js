@@ -7,7 +7,6 @@ import useInputState from '../hooks/useInputState';
 
 function EditTodoForm({ editTodo, id, task, toggleEditForm }) {
   const [value, handleChange, reset] = useInputState(task);
-
   return (
     <form
       onSubmit={(e) => {
